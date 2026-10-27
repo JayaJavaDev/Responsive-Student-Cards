@@ -1,0 +1,94 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.student-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 20px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.student-info {
+  width: 100%;
+  text-align: center;
+}
+
+.student-info h2 {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.student-info p {
+  color: #555555;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.edit-button,
+.student-card button {
+  align-self: flex-end;
+  background-color: #087bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.edit-button:hover,
+.student-card button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .student-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .student-list {
+    grid-template-columns: 1fr;
+  }
+
+  .student-card {
+    padding: 24px 16px;
+  }
+}
